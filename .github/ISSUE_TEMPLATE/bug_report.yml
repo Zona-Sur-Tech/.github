@@ -1,0 +1,74 @@
+name: Bug Report
+description: Reportar un error o comportamiento inesperado
+title: "[BUG] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por reportar este problema.
+        Incluye suficiente contexto técnico para poder reproducirlo.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Resumen del problema
+      description: Explica claramente qué está fallando.
+      placeholder: El endpoint devuelve 500 cuando...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos para reproducir
+      description: Lista exacta de pasos.
+      placeholder: |
+        1. Ir a...
+        2. Ejecutar...
+        3. Ver error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Resultado esperado
+      placeholder: Debería responder 200 con...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Resultado actual
+      placeholder: Responde 500 con el mensaje...
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Impacto
+      description: Indica si afecta producción, staging, un tenant específico o solo local.
+      placeholder: Afecta producción para todos los usuarios autenticados.
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, stack trace o evidencia
+      description: Pega logs, errores, screenshots o payloads relevantes.
+      render: shell
+
+  - type: input
+    id: environment
+    attributes:
+      label: Entorno
+      placeholder: production / staging / local
+
+  - type: input
+    id: commit
+    attributes:
+      label: Commit / branch
+      placeholder: main / feature/auth-fix / SHA
