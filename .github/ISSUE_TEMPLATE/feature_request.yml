@@ -1,0 +1,52 @@
+name: Feature Request
+description: Proponer una nueva funcionalidad o mejora
+title: "[FEATURE] "
+labels:
+  - feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe la mejora con foco en problema, impacto y solución.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema a resolver
+      description: Qué limitación existe hoy.
+      placeholder: Los usuarios no pueden...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Solución propuesta
+      description: Explica cómo debería funcionar.
+      placeholder: Agregar un módulo que permita...
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_cases
+    attributes:
+      label: Casos de uso
+      placeholder: |
+        - Como admin quiero...
+        - Como vendedor quiero...
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Alcance técnico
+      description: Frontend, backend, DB, auth, billing, integraciones, etc.
+      placeholder: Requiere cambios en apps/web, apps/api y esquema de base de datos.
+
+  - type: textarea
+    id: success
+    attributes:
+      label: Criterios de éxito
+      placeholder: |
+        - El usuario puede...
+        - El sistema valida...
+        - Se registra auditoría...
